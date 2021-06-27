@@ -1,6 +1,6 @@
 package com.hx;
 
-public class She {
+public class Snake {
     public void move(){
         System.out.println("嘶嘶嘶");
     }
