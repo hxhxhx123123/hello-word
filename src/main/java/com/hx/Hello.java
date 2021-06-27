@@ -1,12 +1,23 @@
 package com.hx;
 
-import org.apache.commons.lang3.StringUtils;
+import javax.swing.*;
+import java.awt.*;
 
-public class Hello {
+public class Hello extends JFrame {
+
+    public Hello() {
+        add(new Snake());
+        setResizable(false);
+        pack();
+        setTitle("Snake");
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
     public static void main(String[] args) {
-        System.out.println(StringUtils.lowerCase("Hello World"));
-        Snake snake = new Snake();
-        snake.move();
-
+        EventQueue.invokeLater(() -> {
+            JFrame ex = new Hello();
+            ex.setVisible(true);
+        });
     }
 }
